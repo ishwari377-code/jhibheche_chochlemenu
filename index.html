@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jibheche Chochle | Assal Mansahari</title>
+    <style>
+        body {
+            background-color: #120907;
+            margin: 0; padding: 0;
+            font-family: 'Georgia', serif;
+            display: flex; justify-content: center; align-items: center;
+            min-height: 100vh;
+        }
+        #landing-screen {
+            display: flex; flex-direction: column; align-items: center;
+            max-width: 520px; width: 100%; padding: 25px; box-sizing: border-box; text-align: center;
+        }
+        .front-page-graphic {
+            width: 100%; height: auto; border-radius: 12px;
+            box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.8);
+            border: 2px solid #2e1811; margin-bottom: 25px;
+        }
+        .reveal-btn {
+            background: linear-gradient(135deg, #8a1414 0%, #b82323 100%);
+            color: #f7eae4; border: 2px solid #d4af37;
+            padding: 16px 40px; font-size: 1.1rem; font-weight: bold;
+            letter-spacing: 1px; cursor: pointer; border-radius: 30px;
+            text-transform: uppercase; box-shadow: 0 6px 20px rgba(138, 20, 20, 0.4);
+            transition: all 0.3s ease;
+        }
+        .reveal-btn:hover {
+            transform: translateY(-3px); background: #d4af37; color: #120907;
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+        }
+        #menu-screen {
+            display: none; max-width: 550px; width: 100%;
+            padding: 20px; box-sizing: border-box; flex-direction: column; gap: 25px;
+        }
+        .menu-card-img {
+            width: 100%; height: auto; border-radius: 12px;
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.6); border: 1px solid #3d2217;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ================= SCREEN 1: FRONT WELCOME COVER PAGE ================= -->
+    <div id="landing-screen">
+        <img src="front_page.png" alt="Jibheche Chochle Welcome Cover" class="front-page-graphic">
+        <button class="reveal-btn" onclick="revealOurMenu()">Click Here to Reveal the Menu</button>
+    </div>
+
+    <!-- ================= SCREEN 2: REVEALED MENU PAGES ================= -->
+    <div id="menu-screen">
+        <img src="menu_page1.png" alt="Menu Page 1" class="menu-card-img" loading="lazy">
+        <img src="menu_page2.png" alt="Menu Page 2" class="menu-card-img" loading="lazy">
+        <img src="menu_page3.png" alt="Menu Page 3" class="menu-card-img" loading="lazy">
+        <img src="menu_page4.png" alt="Menu Page 4" class="menu-card-img" loading="lazy">
+    </div>
+
+    <script>
+        function revealOurMenu() {
+            document.getElementById('landing-screen').style.display = 'none';
+            document.getElementById('menu-screen').style.display = 'flex';
+            window.scrollTo(0, 0);
+        }
+    </script>
+
+</body>
+</html>
